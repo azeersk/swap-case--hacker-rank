@@ -1,0 +1,20 @@
+def swap_case(s):
+    new_list = s.split()
+    new_list_2 = ''
+    for i in range(len(new_list)):
+        new_list_2 += " "
+        for j in new_list[i]:
+            if j.isalpha:
+                if j == j.upper():
+                    new_list_2 += j.lower()
+                elif j == j.lower():
+                    new_list_2 += j.upper()
+            else:
+                new_list_2 += j
+    return new_list_2[1:]
+            
+
+if __name__ == '__main__':
+    s = input()
+    result = swap_case(s)
+    print(result)
